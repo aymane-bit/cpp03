@@ -6,7 +6,7 @@
 /*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 18:00:35 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/04 12:52:26 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/07 12:10:58 by akajjou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@ ClapTrap::ClapTrap()
 {
     std::cout << "default constructor called\n";
     name = "nameless";
-    hit_points = 10;
-    energy_points = 10;
-    attack_damage = 0;
+    hit_points = 100;
+    energy_points = 50;
+    attack_damage = 20;
 }
 
 ClapTrap::ClapTrap(std::string _name)
 {
     name = _name;
-    hit_points = 10;
-    energy_points = 10;
-    attack_damage = 0;
+    hit_points = 100;
+    energy_points = 50;
+    attack_damage = 20;
     std::cout << "ClapTrap constructor called for " << _name << std::endl;
 }
 
