@@ -6,7 +6,7 @@
 /*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 17:53:49 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/09 17:05:34 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/10 12:14:48 by akajjou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class ClapTrap
         int energy_points;
         int attack_damage;
     public :
-        // orthodox requirment 
+        // orthodox form
         ClapTrap();
         ClapTrap(std::string _name);
         ClapTrap(const ClapTrap &original);

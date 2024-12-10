@@ -6,7 +6,7 @@
 /*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 18:00:35 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/07 12:10:58 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/09 17:01:09 by akajjou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap()
 {
-    std::cout << "default constructor called\n";
+    std::cout << "ClapTrap default constructor called\n";
     name = "nameless";
     hit_points = 100;
     energy_points = 50;
@@ -32,13 +32,13 @@ ClapTrap::ClapTrap(std::string _name)
 
 ClapTrap::ClapTrap(const ClapTrap &original)
 {
-    std::cout << "copy constructor called\n";
+    std::cout << "ClapTrap copy constructor called\n";
     *this = original; 
 }
 
 ClapTrap  &ClapTrap::operator=(const ClapTrap &original)
 {
-    std::cout << "copy assigment operator called\n";   
+    std::cout << "ClapTrap copy assigment operator called\n";   
     this->name = original.name;
     this->hit_points = original.hit_points;
     this->energy_points = original.energy_points;
@@ -48,7 +48,7 @@ ClapTrap  &ClapTrap::operator=(const ClapTrap &original)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destractor called\n";
+    std::cout << "ClapTrap Destractor called\n";
 }
 
 void    ClapTrap::attack(const std::string& target)
@@ -97,4 +97,29 @@ void    ClapTrap::beRepaired(unsigned int amount)
     this->hit_points += amount;
     std::cout << "ClapTrap " << this->name << " repairs itself, restoring " 
               << amount << " hit points!\n";
+}
+
+std::string const  &ClapTrap::get_name() const
+{
+    return this->name;
+}
+
+int const &ClapTrap::get_hitpt() const
+{
+    return this->hit_points;
+}
+
+int const &ClapTrap::get_dammage() const
+{
+    return this->attack_damage;
+}
+
+int const &ClapTrap::get_energypt() const
+{
+    return this->energy_points;
+}
+
+void    ClapTrap::decrement_energypt()
+{
+    this->energy_points--;
 }

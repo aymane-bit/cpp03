@@ -1,38 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/07 12:07:16 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/10 12:16:07 by akajjou          ###   ########.fr       */
+/*   Created: 2024/12/09 13:47:01 by akajjou           #+#    #+#             */
+/*   Updated: 2024/12/10 17:54:34 by akajjou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef SCARTRAP_HPP
-# define SCARTRAP_HPP
+# ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
 
-# include "ClapTrap.hpp"
 # include <iostream>
+# include "ClapTrap.hpp"
+# include "ScavTrap.hpp"
+# include "FragTrap.hpp"
 
 
-class ScavTrap : public ClapTrap
+class DiamondTrap : public FragTrap , public ScavTrap
 {
+    private :
+        std::string name;
     public :
         // orthodox form
-        ScavTrap();
-        ScavTrap(std::string const &_name);
-        ScavTrap(const ScavTrap &original);
-        ScavTrap& operator=(const ScavTrap &original);
-        ~ScavTrap();
+        DiamondTrap();
+        DiamondTrap(std::string const &_name);
+        DiamondTrap(DiamondTrap const &copy);
+		~DiamondTrap(void);
+        DiamondTrap	&operator=(DiamondTrap const &copy);
         // mm fct
-        void guardGate();
-        void attack(const std::string& target);
-        
+        void	whoAmI(void);
+		void	attack(std::string const &target);
+
 };
-
-
 
 
 

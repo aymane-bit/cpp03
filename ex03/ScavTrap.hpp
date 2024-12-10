@@ -6,7 +6,7 @@
 /*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/07 12:07:16 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/10 12:16:07 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/10 17:10:23 by akajjou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <iostream>
 
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
     public :
         // orthodox form
@@ -29,7 +29,7 @@ class ScavTrap : public ClapTrap
         // mm fct
         void guardGate();
         void attack(const std::string& target);
-        
+        int const &getenergy_scav() const;
 };
 
 
